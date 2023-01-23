@@ -1,0 +1,35 @@
+<script>
+    // "use strict";
+    // console.log(this);
+    // refer window object 
+
+    // function sum(){
+    //     var add = 2+2;
+    //     console.log("Sum of two no. is " + add);
+    //     console.log(this);
+    //     // if we use this in "use strict" mode it will throw undefined .
+    // }
+    // sum()
+
+    const chanchal = {
+        name: "chanchal",
+        qualification: "B tech",
+        sum: function sum() {
+            var add = 2 + 2;
+            console.log("Sum of two no. is " + add);
+            console.log(this.name);
+            console.log(this);
+
+            function child() {
+            var name = "child";
+            console.log("child method name : " + name);
+            console.log(this);
+            // Regular function always refer to global object .
+        }
+        child()
+        },
+    }
+
+    chanchal.sum()
+    // chanchal.child()
+</script>
